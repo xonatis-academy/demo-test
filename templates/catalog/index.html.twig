@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalogue{% endblock %}
+
+{% block page_title %}Catalogue{% endblock %}
+
+{% block body %}
+<div class="row row-cols-1 row-cols-md-2">
+    {% for book in books %}
+    <div class="card text-white bg-dark m-3" style="max-width: 20rem;">
+        <div class="card-header"><i class="fas fa-archive"></i></div>
+        <div class="card-body">
+            <h4 class="card-title">{{ book.title }}</h4>
+            <p class="card-text">{{ book.description }}</p>
+            <form method="post">
+                <input type="hidden" name="form-id" value="1" />
+                <button name="form-action" value="add-to-cart" type="submit" class="btn btn-success">
+                    {{ book.price | format_currency('EUR', locale='fr') }} <i class="fas fa-cart-plus"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
