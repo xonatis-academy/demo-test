@@ -1,0 +1,13 @@
+public :
+- presentation : PresentationController
+- catalogue : CatalogController
+- contact : ContactController
+
+utilisateur inscrit :
+- profil : ProfileController
+- historique de leurs commandes : OrderHistoryController
+
+administrateurs :
+- creation/modif/suppression de livres : AdminBookController
+- modif/suppression d'utilisateurs : AdminUserController
+- modif/suppression de commandes : AdminOrderController
