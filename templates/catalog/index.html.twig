@@ -25,6 +25,8 @@
         <div class="card-body">
             <h4 class="card-title">{{ book.title }}</h4>
             <p class="card-text">{{ book.description }}</p>
+
+            <a type="button" class="btn btn-warning" href="{{ path('cart_add', {id : book.id}) }}">Ajouter</a>
         </div>
     </div>
 
